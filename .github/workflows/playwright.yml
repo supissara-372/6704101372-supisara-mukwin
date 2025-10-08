@@ -27,10 +27,8 @@ jobs:
 
       # ⏱ รอให้ server พร้อมก่อนทดสอบ
       - name: Wait for server to be ready
-        uses: jakejarvis/wait-on-action@v2
-        with:
-          url: http://localhost:9000/
-
+        run: npx wait-on http://localhost:9000/ -t 60000
+        
       # 🧪 รัน Playwright tests
       - name: Run Playwright tests
         run: npx playwright test
