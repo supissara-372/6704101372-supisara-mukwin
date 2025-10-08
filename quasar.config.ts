@@ -41,6 +41,7 @@ export default defineConfig((/* ctx */) => {
         node: 'node20'
       },
 
+      
       typescript: {
         strict: true,
         vueShim: true
